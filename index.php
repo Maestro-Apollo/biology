@@ -66,7 +66,7 @@ session_start();
 
 </head>
 
-<body class="bg-light">
+<body class="bg-dark">
     <?php include('layout/navbar.php'); ?>
 
 
@@ -75,9 +75,7 @@ session_start();
 
 
     <section>
-        <div class="container text-center">
-            <a href="./add-stock.php" class="btn log_btn">Add Stock Item</a>
-        </div>
+
     </section>
 
 
