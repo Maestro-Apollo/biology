@@ -21,7 +21,7 @@ img {
 }
 
 .back_img {
-    background-image: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url('../images/bg-image1.png');
+    background-image: linear-gradient( rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url('../images/bg-image1.png');
     height: 90vh;
     background-size: cover;
     background-repeat: no-repeat;
@@ -47,23 +47,23 @@ img {
 }
 
 .navbar-light .navbar-nav .nav-link {
-    color: #05445E;
+    color: #05445e;
     transition: 0.7s;
 }
 
 .navbar-light .navbar-nav .nav-link:hover {
-    color: #189AB4;
+    color: #189ab4;
 }
 
 .back_nav {
-    background-color: #05445E;
+    background-color: #05445e;
     border-radius: 5px;
     transition: 0.7s;
     color: #fff;
 }
 
 .back_nav:hover {
-    background-color: #189AB4;
+    background-color: #189ab4;
 }
 
 input {
@@ -71,7 +71,7 @@ input {
 }
 
 .home_btn {
-    background-color: #EEA11D;
+    background-color: #eea11d;
     font-family: 'Lato', sans-serif;
     color: #481639;
     font: bolder;
@@ -81,7 +81,7 @@ input {
 
 .home_btn:hover {
     background-color: #481639;
-    color: #EEA11D;
+    color: #eea11d;
 }
 
 .item_section .card-body .card-title {
@@ -131,7 +131,7 @@ span {
 }
 
 .blog .carousel-indicators .active {
-    background-color: #EEA11D;
+    background-color: #eea11d;
     border: 1px solid #000;
     padding: 5px;
 }
@@ -165,7 +165,7 @@ button {
 }
 
 .fav_btn {
-    background-color: #EEA11D;
+    background-color: #eea11d;
     transition: 0.7s;
     float: right;
 }
@@ -177,21 +177,21 @@ button {
 
 .fav_btn:hover {
     background-color: #481639;
-    color: #EEA11D;
+    color: #eea11d;
 }
 
 .fav_btn:hover .fa-heart {
-    color: #EEA11D !important;
+    color: #eea11d !important;
 }
 
 .log_btn {
-    background-color: #05445E;
+    background-color: #05445e;
     transition: 0.7s;
     color: #fff;
 }
 
 .log_btn:hover {
-    background-color: #189AB4;
+    background-color: #189ab4;
     color: #fff;
 }
 
@@ -209,7 +209,7 @@ input {
 .vertical_line {
     height: 70%;
     width: 2px;
-    background-color: #00735C;
+    background-color: #00735c;
     margin-top: 150px;
 }
 
@@ -232,18 +232,18 @@ button {
 }
 
 .reserve_section .fa-star {
-    color: #EEA11D !important;
+    color: #eea11d !important;
 }
 
 .reserve_section_btn .color_btn {
-    background-color: #EEA11D;
+    background-color: #eea11d;
     color: #481639;
     transition: 0.7s;
 }
 
 .reserve_section_btn .color_btn:hover {
     background-color: #481639;
-    color: #EEA11D;
+    color: #eea11d;
 }
 
 @media (max-width: 575.98px) {
@@ -262,5 +262,5 @@ button {
 }
 
 .bg_color {
-    background-color: #FCF4ED !important;
+    background-color: #fcf4ed !important;
 }

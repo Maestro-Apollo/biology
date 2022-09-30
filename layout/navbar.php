@@ -18,7 +18,7 @@
                         <a class="nav-link text-dark font-weight-bold" href="index.php">Home</a>
                     </li>
                     <li class="nav-item p-1">
-                        <a class="nav-link text-dark font-weight-bold" href="logout.php">Search
+                        <a class="nav-link text-dark font-weight-bold" href="search.php">Search
                         </a>
                     </li>
                     <li class="nav-item p-1">
