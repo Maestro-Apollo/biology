@@ -114,8 +114,9 @@ session_start();
                 <table id="userTable" class="table table-striped table-bordered nowrap" style="width: 100%">
                     <thead>
                         <tr>
-                            <th>ID</th>
                             <th> scientific_name </th>
+                            <th>ID</th>
+
                             <th> taxonomy_id </th>
                             <th> rank </th>
                             <th> domain </th>
@@ -229,22 +230,6 @@ session_start();
         });
         return tmp;
     }();
-
-
-
-    // $(document).ready(function() {
-    //     $.ajax({
-    //         type: "POST",
-
-    //         dataType: "text",
-    //         success: function(response) {
-    //             localData1 = response;
-    //         },
-    //         error: function(request, error) {
-    //             console.log("ERROR:" + error);
-    //         }
-    //     });
-    // })
     </script>
 
     <script>
@@ -272,6 +257,8 @@ session_start();
             }
         ],
         columns: [{
+                data: "scientific_name"
+            }, {
                 data: "id",
                 "render": function(data, type, row, meta) {
                     if (type === 'display') {
@@ -281,9 +268,7 @@ session_start();
                     return data;
                 }
             },
-            {
-                data: "scientific_name"
-            },
+
             {
                 data: "taxonomy_id"
             },
