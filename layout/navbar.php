@@ -22,7 +22,7 @@
                         </a>
                     </li>
                     <li class="nav-item p-1">
-                        <a class="nav-link text-dark font-weight-bold" href="logout.php">Browse
+                        <a class="nav-link text-dark font-weight-bold" href="view-plots.php">Plots
                         </a>
                     </li>
                     <li class="nav-item p-1">
