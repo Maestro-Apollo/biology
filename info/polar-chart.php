@@ -9,7 +9,7 @@ class Details extends database
 {
     public function showDetails()
     {
-        $sql = "SELECT count(if(microbiome='Extreme',1,null)) as Microbiome, count(if(extremophile='Yes',1,null)) as Extremophile from scientific_tbl";
+        $sql = "SELECT count(*) as Total, scientific_name from scientific_tbl WHERE domain = 'Bacteria/Archaea' GROUP BY scientific_name";
         $res = mysqli_query($this->link, $sql);
         $arr = array();
         if ($res) {

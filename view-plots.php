@@ -65,6 +65,7 @@ session_start();
     <script src="https://cdn.plot.ly/plotly-2.14.0.min.js"></script>
 
 
+
 </head>
 
 <body class="bg-dark">
@@ -72,7 +73,10 @@ session_start();
 
     <section>
         <div class="container">
-            <h1 class="text-center text-white font-weight-bold">Bar Plots</h1>
+            <h1 class="text-center text-white font-weight-bold">Bar Plot</h1>
+            <div class="col-md-12 bg-white">
+                <canvas id="myChart"></canvas>
+            </div>
             <div id="tester"></div>
         </div>
     </section>
@@ -103,27 +107,61 @@ session_start();
         return arr;
     }();
 
+
+    var result_data1 = function() {
+        var label = [];
+        var valueData = [];
+        var arr = [];
+        $.ajax({
+            'async': false,
+            'type': "GET",
+            'global': false,
+            'dataType': 'JSON',
+            'url': "http://localhost/biology/info/polar-chart.php",
+
+            'success': function(data) {
+                for (let i = 0; i < data.length; i++) {
+                    label.push(data[i].scientific_name);
+                    valueData.push(data[i].Total);
+
+                }
+                var result = valueData.map(function(x) {
+                    return parseInt(x, 10);
+                });
+                arr.push(label);
+                arr.push(result);
+            }
+        });
+        return arr;
+    }();
+
+
+
     console.log(result_data);
+    console.log(result_data1);
     </script>
     <script>
     var data = [{
-        x: result_data[0],
-        y: result_data[1],
-        type: 'bar',
-        mode: 'markers+text',
-        name: 'Markers and Text',
+        y: result_data1[1],
+        boxpoints: 'all',
+        jitter: 0.3,
+        pointpos: -1.8,
+        type: 'box'
     }];
 
     var layout = {
-        title: 'Bar Chart',
+        title: 'Microbiome(Extreme) Extremophile(Yes)',
         showlegend: false
     };
 
     Plotly.newPlot('tester', data, layout, {
         displaylogo: false,
-        responsive: true
+        responsive: true,
+        scrollZoom: true
     });
     </script>
+    <script src="./js/plot1.js"></script>
+
 
 
 
