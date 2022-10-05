@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+include_once('./util/website-api.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -131,7 +131,7 @@ session_start();
         $.ajax({
             'type': "POST",
             'dataType': 'JSON',
-            'url': "http://localhost/biology/info/single-details.php",
+            'url': "<?php echo $website ?>/info/single-details.php",
             'data': {
                 "id": '<?php echo $_GET['id'] ?>',
             },

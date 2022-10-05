@@ -26,11 +26,11 @@
                         </a>
                     </li>
                     <li class="nav-item p-1">
-                        <a class="nav-link text-dark font-weight-bold" href="logout.php">Help
+                        <a class="nav-link text-dark font-weight-bold" href="#">Help
                         </a>
                     </li>
                     <li class="nav-item p-1">
-                        <a class="nav-link text-dark font-weight-bold" href="logout.php">Account
+                        <a class="nav-link text-dark font-weight-bold" href="#">Account
                         </a>
                     </li>
 

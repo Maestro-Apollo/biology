@@ -1,5 +1,6 @@
 <?php
 session_start();
+include_once('./util/website-api.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -220,7 +221,7 @@ session_start();
             'type': "POST",
             'global': false,
             'dataType': 'text',
-            'url': "http://localhost/biology/info/details.php",
+            'url': "<?php echo $website ?>/info/details.php",
             'data': {
                 "tag": '<?php echo $_POST['tag'] ?>',
             },

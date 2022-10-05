@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+include_once('./util/website-api.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -77,7 +77,7 @@ session_start();
             <div class="col-md-12 bg-white">
                 <canvas id="myChart"></canvas>
             </div>
-            <div id="tester"></div>
+            <!-- <div id="tester"></div> -->
         </div>
     </section>
 
@@ -117,7 +117,7 @@ session_start();
             'type': "GET",
             'global': false,
             'dataType': 'JSON',
-            'url': "http://localhost/biology/info/polar-chart.php",
+            'url': "<?php echo $website ?>/info/polar-chart.php",
 
             'success': function(data) {
                 for (let i = 0; i < data.length; i++) {
