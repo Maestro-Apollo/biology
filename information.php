@@ -103,91 +103,116 @@ include_once('./util/website-api.php');
 
     <div id="preloader"></div>
 
-
     <?php include('layout/navbar.php'); ?>
-
-
 
     <section>
         <div class="p-5 content">
-            <div class="bg-white p-2">
 
-                <table id="userTable" class="table table-striped table-bordered nowrap" style="width: 100%">
-                    <thead>
-                        <tr>
-                            <th> scientific_name </th>
-                            <th>ID</th>
+            <ul class="nav nav-pills mb-3 bg-white" id="pills-tab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab"
+                        aria-controls="pills-home" aria-selected="true">Search Result</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab"
+                        aria-controls="pills-profile" aria-selected="false">Bar Plot</a>
+                </li>
 
-                            <th> taxonomy_id </th>
-                            <th> rank </th>
-                            <th> domain </th>
-                            <th> eukarya_type </th>
-                            <th> type_fungi </th>
-                            <th> lichen </th>
-                            <th> type_algae </th>
-                            <th> diatom </th>
-                            <th> microbiome </th>
-                            <th> microbiome_water </th>
-                            <th> microbiome_water_fresh </th>
-                            <th> microbiome_water_fresh_wetland </th>
-                            <th> microbiome_water_marine </th>
-                            <th> microbiome_water_sediment </th>
-                            <th> microbiome_soil </th>
-                            <th> microbiome_soil_type </th>
-                            <th> microbiome_extreme </th>
-                            <th> euk_algae_metabolism </th>
-                            <th> euk_growth </th>
-                            <th> euk_lifestyle </th>
-                            <th> euk_lifestyle_benthic </th>
-                            <th> euk_morphology </th>
-                            <th> euk_symmetry </th>
-                            <th> euk_secondary_structure </th>
-                            <th> euk_secondary_structure_type </th>
-                            <th> euk_pigmentation </th>
-                            <th> euk_pigmentation_type </th>
-                            <th> euk_locomotion </th>
-                            <th> euk_locomotion_structure </th>
-                            <th> biofilm_forming </th>
-                            <th> extremophile </th>
-                            <th> extremophile_type </th>
-                            <th> euk_reproduction </th>
-                            <th> spore_forming </th>
-                            <th> euk_symbiosis </th>
-                            <th> euk_symbiosis_host </th>
-                            <th> pathogen </th>
-                            <th> pathogen_host </th>
-                            <th> euk_antagonism </th>
-                            <th> euk_antagonism_type </th>
-                            <th> euk_content_production </th>
-                            <th> euk_content_list </th>
-                            <th> euk_uv_resistant </th>
-                            <th> euk_uv_resistant_list </th>
-                            <th> euk_toxin </th>
-                            <th> euk_toxin_type </th>
-                            <th> metabolism </th>
-                            <th> metabolism_energy </th>
-                            <th> metabolism_electron_source </th>
-                            <th> metabolism_carbon_source </th>
-                            <th> microbiome_host </th>
-                            <th> microbiome_host_human </th>
-                            <th> pathogen_host_human </th>
-                            <th> antimicrobial_activity </th>
-                            <th> bac_oxygen_use </th>
-                            <th> bac_gram_stain </th>
-                            <th> virus_genome </th>
-                            <th> virus_strand </th>
-                            <th> virus_strand_sense </th>
-                            <th> virus_capsid </th>
-                            <th> virus_capsid_symmetry </th>
-                            <th> reference </th>
-                            <th> volunteer_name </th>
+            </ul>
+            <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                    <div class="bg-white p-2">
 
-                        </tr>
-                    </thead>
+                        <table id="userTable" class="table table-striped table-bordered nowrap" style="width: 100%">
+                            <thead>
+                                <tr>
+                                    <th> scientific_name </th>
+                                    <th>ID</th>
+
+                                    <th> taxonomy_id </th>
+                                    <th> rank </th>
+                                    <th> domain </th>
+                                    <th> eukarya_type </th>
+                                    <th> type_fungi </th>
+                                    <th> lichen </th>
+                                    <th> type_algae </th>
+                                    <th> diatom </th>
+                                    <th> microbiome </th>
+                                    <th> microbiome_water </th>
+                                    <th> microbiome_water_fresh </th>
+                                    <th> microbiome_water_fresh_wetland </th>
+                                    <th> microbiome_water_marine </th>
+                                    <th> microbiome_water_sediment </th>
+                                    <th> microbiome_soil </th>
+                                    <th> microbiome_soil_type </th>
+                                    <th> microbiome_extreme </th>
+                                    <th> euk_algae_metabolism </th>
+                                    <th> euk_growth </th>
+                                    <th> euk_lifestyle </th>
+                                    <th> euk_lifestyle_benthic </th>
+                                    <th> euk_morphology </th>
+                                    <th> euk_symmetry </th>
+                                    <th> euk_secondary_structure </th>
+                                    <th> euk_secondary_structure_type </th>
+                                    <th> euk_pigmentation </th>
+                                    <th> euk_pigmentation_type </th>
+                                    <th> euk_locomotion </th>
+                                    <th> euk_locomotion_structure </th>
+                                    <th> biofilm_forming </th>
+                                    <th> extremophile </th>
+                                    <th> extremophile_type </th>
+                                    <th> euk_reproduction </th>
+                                    <th> spore_forming </th>
+                                    <th> euk_symbiosis </th>
+                                    <th> euk_symbiosis_host </th>
+                                    <th> pathogen </th>
+                                    <th> pathogen_host </th>
+                                    <th> euk_antagonism </th>
+                                    <th> euk_antagonism_type </th>
+                                    <th> euk_content_production </th>
+                                    <th> euk_content_list </th>
+                                    <th> euk_uv_resistant </th>
+                                    <th> euk_uv_resistant_list </th>
+                                    <th> euk_toxin </th>
+                                    <th> euk_toxin_type </th>
+                                    <th> metabolism </th>
+                                    <th> metabolism_energy </th>
+                                    <th> metabolism_electron_source </th>
+                                    <th> metabolism_carbon_source </th>
+                                    <th> microbiome_host </th>
+                                    <th> microbiome_host_human </th>
+                                    <th> pathogen_host_human </th>
+                                    <th> antimicrobial_activity </th>
+                                    <th> bac_oxygen_use </th>
+                                    <th> bac_gram_stain </th>
+                                    <th> virus_genome </th>
+                                    <th> virus_strand </th>
+                                    <th> virus_strand_sense </th>
+                                    <th> virus_capsid </th>
+                                    <th> virus_capsid_symmetry </th>
+                                    <th> reference </th>
+                                    <th> volunteer_name </th>
+
+                                </tr>
+                            </thead>
 
 
-                </table>
+                        </table>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+
+                    <div class="container">
+                        <h1 class="text-center text-white font-weight-bold">Bar Plot</h1>
+                        <div class="col-md-12 bg-white">
+                            <canvas id="myChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
             </div>
+
+
         </div>
     </section>
 
@@ -204,6 +229,38 @@ include_once('./util/website-api.php');
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
     <script src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.html5.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.print.min.js"></script>
+
+    <script>
+    var result_data = function() {
+        var arr = [];
+        $.ajax({
+            'async': false,
+            'type': "POST",
+            'global': false,
+            'dataType': 'json',
+            'url': "http://localhost/biology/info/bar-plot2.php",
+            'data': {
+                "tag": '<?php echo $_POST['tag'] ?>',
+            },
+            'success': function(data) {
+                console.log(data);
+                a = Object.keys(data[0]);
+                var result = Object.values(data[0]).map(function(x) {
+                    return parseInt(x, 10);
+                });
+                arr.push(a);
+                arr.push(result);
+            }
+        });
+        return arr;
+    }();
+    console.log(result_data);
+    </script>
+    <script src="./js/plot3.js"></script>
+
+
+
+
 
     <script>
     // $("table").addClass("loading");

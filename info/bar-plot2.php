@@ -12,7 +12,7 @@ class Details extends database
         if (isset($_POST['tag'])) {
             $tag = addslashes(trim($_POST['tag']));
 
-            $sql = "SELECT * from scientific_tbl where scientific_name	like '%$tag%'
+            $sql = "SELECT count(*) as total from scientific_tbl where scientific_name	like '%$tag%'
             or	taxonomy_id	like '%$tag%'
             or	`rank`	like '%$tag%'
             or	domain	like '%$tag%'
@@ -79,7 +79,7 @@ class Details extends database
             ";
             $res = mysqli_query($this->link, $sql);
             $arr = array();
-            if (mysqli_num_rows($res) > 0) {
+            if ($res) {
                 foreach ($res as $row) {
                     $arr[] = $row;
                 }
@@ -87,8 +87,6 @@ class Details extends database
             } else {
                 return '';
             }
-        } else {
-            return '';
         }
     }
 }
